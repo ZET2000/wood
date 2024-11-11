@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+</head>
+<body>
+  <section>
+    <!--bg-->
+  </section>
+  <div id="app">
+      <div class="view-info">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <img width="40px" height="40px" src="https://i.postimg.cc/MTFtpPVN/IMAGE-2024-11-11-23-23-53.jpg" />
+        </div>
+        <div>
+            <div id="ton-connect"></div>
+        </div>
+      </div>
+      <main>
+        <nav class="cnt">
+          <div class="total">
+              <h1 style="font-family: Geologica; font-size: 18px; color: #f0f0f0;">Total members</h1>
+          </div>
+          <div class="count">
+              <div>
+                  <p>2</p>
+              </div>
+              <div class="nums">
+                  <p>8</p>
+                  <p>9</p>
+                  <p>0</p>
+              </div>
+          </div>
+        </nav>
+      </main>
+      <div class="another">
+          <button>Присоединиться</button>
+      </div>
+  </div>
+  <script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+        manifestUrl: 'https://raw.githubusercontent.com/purplemeth/presalebot/main/tonconnect-manifest.json',
+        buttonRootId: 'ton-connect'
+    });
+    </script>
+  <script>
+    function render() {
+        const section = document.querySelector('section');
+        const fragment = document.createDocumentFragment();
+
+        for (let i = 0; i < 350; i++) {
+            const span = document.createElement('span');
+            fragment.appendChild(span);
+        }
+
+        section.appendChild(fragment);
+    }
+    render()
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
