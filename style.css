@@ -8,8 +8,9 @@
 }
 body 
 {
-  min-height: 100vh;
+  height: 100%;
   background: #000;
+  overflow-x: hidden;
 }
 section 
 {
@@ -55,7 +56,7 @@ section span
 
 .view-info {
   position: relative;
-  z-index: 10;
+  z-index: 100;
   padding: 15px 20px;
   background: #000;
   width: 100vw;
@@ -68,7 +69,7 @@ section span
 
 .another {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   bottom: 0;
   width: 100vw;
   min-height: 120px;
@@ -88,6 +89,11 @@ section span
   border-radius: 10px;
   font-size: 17px;
   font-family: Geologica;
+  border-bottom: 5px solid #088139;
+}
+
+button:hover {
+  border-bottom: 0;
 }
 
 main {
@@ -122,6 +128,7 @@ main {
   justify-content: space-between;
   align-items: center;
   min-width: 170px;
+  gap: 20px;
 }
 
 .nums {
@@ -133,12 +140,10 @@ main {
 
 p {
   background: #ffffff;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   font-size: 20px;
   color: #000;
   font-weight: 700;
 }
-
-
 
