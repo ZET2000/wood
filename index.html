@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
   <section>
@@ -26,7 +27,7 @@
       <main>
         <nav class="cnt">
           <div class="total">
-              <h1 style="font-family: Geologica; font-size: 18px; color: #f0f0f0;">Total members</h1>
+              <h1 style="font-family: Geologica; font-size: 19px; color: #f0f0f0;">Total members</h1>
           </div>
           <div class="count">
               <div>
@@ -51,6 +52,7 @@
     });
     </script>
   <script>
+    window.Telegram.WebApp.setHeaderColor('#000000')
     function render() {
         const section = document.querySelector('section');
         const fragment = document.createDocumentFragment();
@@ -66,20 +68,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
