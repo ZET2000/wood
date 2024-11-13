@@ -6,12 +6,15 @@
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
-body 
+body
 {
   height: 100%;
   background: #000;
   overflow: none;
   touch-action: none;
+  scrollbar-width: none;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-x: none;
 }
 section 
 {
@@ -164,6 +167,4 @@ footer {
   background: #000000;
   box-shadow: 0px 9px 13px 12px #000;
 }
-
-
 
