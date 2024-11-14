@@ -153,6 +153,7 @@
   <script>
       const openModalBoard = () => {
         document.querySelector('.view-info').style.background = '#ffffff'
+        document.querySelector('.view-info').style.boxShadow = 'inset 0px 1px 20px 0px #f0f0f0'
         document.querySelector('.leader-board').style.display = 'block'
         document.querySelector('.leader-board').classList.add('animate')
       }
@@ -165,7 +166,7 @@
     </script>
   <script>
     window.Telegram.WebApp.setHeaderColor('#000000')
-    //document.querySelector('#profile').setAttribute('src', `https://t.me/i/userpic/160/${window.Telegram.WebApp.initDataUnsafe.user.username}.jpg`)
+    document.querySelector('#profile').setAttribute('src', `https://t.me/i/userpic/160/${window.Telegram.WebApp.initDataUnsafe.user.username}.jpg`)
     function render() {
         const section = document.querySelector('section');
         const fragment = document.createDocumentFragment();
@@ -181,3 +182,4 @@
   </script>
 </body>
 </html>
+
