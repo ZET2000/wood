@@ -186,6 +186,11 @@ footer {
   bottom: -200px;
 }
 
+.close-animate {
+  animation: close 0.5s ease forwards;
+  bottom: -200px;
+}
+
 @keyframes ref {
   from {
     transform: translateY(100%);
@@ -193,6 +198,17 @@ footer {
   to {
     transform: translateY(0);
     bottom: 0;
+  }
+}
+
+@keyframes close {
+  from {
+    transform: translateY(0);
+    bottom: 0;
+  }
+  to {
+    transform: translateY(100%);
+    bottom: -200px;
   }
 }
 
@@ -214,8 +230,6 @@ ul li {
   gap: 10px;
   align-items: center;
 }
-
-
 
 
 
