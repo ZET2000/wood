@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 *
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 body
 {
@@ -69,6 +69,7 @@ section span
   justify-content: space-between;
   min-height: 80px;
   box-shadow: 0px 10px 19px 0 #000000;
+  transition: background 0.5s;
 }
 
 .another {
@@ -85,8 +86,10 @@ section span
   background: #6bfe07;
   border-radius: 10px;
   font-size: 17px;
-  font-family: Geologica;
+  font-family: Inter;
+  font-weight: 600;
   border-bottom: 5px solid #088139;
+  color: #0e0e0e;
 }
 
 button:hover {
@@ -166,5 +169,30 @@ footer {
   padding: 10px;
   background: #000000;
   box-shadow: 0px 9px 13px 12px #000;
+}
+
+.leader-board {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background: #000;
+  z-index: 1000;
+  background: #ffffff;
+}
+
+.animate {
+  animation: ref 0.5s ease forwards;
+  bottom: -200px;
+}
+
+@keyframes ref {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+    bottom: 0;
+  }
 }
 
