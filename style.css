@@ -196,3 +196,26 @@ footer {
   }
 }
 
+ul {
+  margin-top: 15px;
+}
+
+ul li {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background: #f0f0f0;
+  border-radius: 15px;
+}
+
+.about {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+
+
+
