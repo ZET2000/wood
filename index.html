@@ -151,7 +151,7 @@
       </ul>
   </div>
   <script>
-    window.Telegram.WebApp.BackButton.show()
+      window.Telegram.WebApp.BackButton.show()
       const openModalBoard = () => {
         document.querySelector('.view-info').style.background = '#ffffff'
         document.querySelector('.view-info').style.boxShadow = 'inset 0px 1px 20px 0px #f0f0f0'
@@ -166,12 +166,11 @@
             document.querySelector('.view-info').style.boxShadow = '0px 10px 19px 0 #000000'
             document.querySelector('.leader-board').classList.add('close-animate')
             setTimeout(() => {
+                document.querySelector('.leader-board').style.display = 'none'
+                document.querySelector('.leader-board').classList.remove('animate')
+                document.querySelector('.leader-board').classList.remove('close-animate')
                 window.location.hash = '#'
             }, 500)
-        } else {
-            document.querySelector('.leader-board').style.display = 'none'
-            document.querySelector('.leader-board').classList.remove('animate')
-            document.querySelector('.leader-board').classList.remove('close-animate')
         }
     })
   </script>
