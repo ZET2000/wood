@@ -151,6 +151,7 @@
       </ul>
   </div>
   <script>
+    window.Telegram.WebApp.BackButton.show()
       const openModalBoard = () => {
         document.querySelector('.view-info').style.background = '#ffffff'
         document.querySelector('.view-info').style.boxShadow = 'inset 0px 1px 20px 0px #f0f0f0'
@@ -159,22 +160,20 @@
         window.location.hash = '#ref'
       }
 
-      if (window.location.hash == '#ref') {
-        window.Telegram.WebApp.BackButton.show()
-        window.Telegram.WebApp.BackButton.onClick(() => {
+      window.Telegram.WebApp.BackButton.onClick(() => {
+          if (window.location.hash == '#ref') {
             document.querySelector('.view-info').style.background = '#000000'
             document.querySelector('.view-info').style.boxShadow = '0px 10px 19px 0 #000000'
             document.querySelector('.leader-board').classList.add('close-animate')
             setTimeout(() => {
                 window.location.hash = '#'
             }, 500)
-        })
-    } else {
-        window.Telegram.WebApp.BackButton.hide()
-        document.querySelector('.leader-board').style.display = 'none'
-        document.querySelector('.leader-board').classList.remove('animate')
-        document.querySelector('.leader-board').classList.remove('close-animate')
-    }
+        } else {
+            document.querySelector('.leader-board').style.display = 'none'
+            document.querySelector('.leader-board').classList.remove('animate')
+            document.querySelector('.leader-board').classList.remove('close-animate')
+        }
+    })
   </script>
   <script>
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
@@ -200,5 +199,4 @@
   </script>
 </body>
 </html>
-
 
