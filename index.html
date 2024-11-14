@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -18,7 +18,7 @@
   <div id="app">
       <div class="view-info">
         <div style="display: flex; align-items: center; justify-content: center;">
-            <img width="40px" height="40px" src="https://i.postimg.cc/MTFtpPVN/IMAGE-2024-11-11-23-23-53.jpg" />
+            <img id="profile" style="border-radius: 10px;" width="40px" height="40px" src="https://t.me/i/userpic/160/LowGas.jpg" />
         </div>
         <div>
             <div id="ton-connect"></div>
@@ -27,7 +27,7 @@
       <main>
         <nav class="cnt">
           <div class="total">
-              <h1 style="font-family: Geologica; font-size: 19px; color: #f0f0f0;">Total members</h1>
+              <h1 style="font-family: Inter; font-size: 19px; color: #f0f0f0;">Total members</h1>
           </div>
           <div class="count">
               <div>
@@ -43,7 +43,7 @@
       </main>
       <footer>
           <div class="another">
-              <button>Присоединиться</button>
+              <button>Join earlyer</button>
           </div>
           <nav class="bar">
             <div style="display: grid;align-items: center;justify-content: center;background: #000000;border-radius: 10px;padding: 3px;">
@@ -60,7 +60,7 @@
                     </g>
                 </svg>
              </div>
-             <div style="display: grid;align-items: center;justify-content: center;background: #000000;border-radius: 10px;padding: 3px;">
+             <div style="display: grid;align-items: center;justify-content: center;background: #000000;border-radius: 10px;padding: 3px;" onclick="openModalBoard()">
                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="5 5 30 30" fill="none">
                     <g>
                     <path d="M19.9991 19.8571C18.1058 19.8571 16.5444 19.2426 15.315 18.0138C14.0855 16.7849 13.4708 15.2236 13.4708 13.33C13.4708 11.4367 14.0854 9.87542 15.3145 8.64625C16.5434 7.41708 18.1045 6.8025 19.9979 6.8025C21.8915 6.8025 23.4545 7.41694 24.687 8.64583C25.9195 9.87444 26.5358 11.4354 26.5358 13.3288C26.5358 15.2224 25.9197 16.7839 24.6875 18.0133C23.4555 19.2425 21.8927 19.8571 19.9991 19.8571ZM6.63745 33.3942V29.0967C6.63745 28.0425 6.90287 27.1226 7.4337 26.3371C7.96453 25.5515 8.66009 24.9533 9.52037 24.5425C11.3293 23.7147 13.093 23.0892 14.8116 22.6658C16.5302 22.2425 18.2591 22.0308 19.9983 22.0308C21.75 22.0308 23.4801 22.2443 25.1887 22.6712C26.8973 23.0982 28.6531 23.7224 30.4562 24.5437C31.3331 24.9454 32.0379 25.5401 32.5704 26.3279C33.1029 27.1157 33.3691 28.0401 33.3691 29.1012V33.3942H6.63745Z" fill="#bfbfbf"></path>
@@ -70,6 +70,21 @@
           </nav>
        </footer>
   </div>
+  <div class="leader-board">
+      <div style="display: grid; align-items: center; justify-content: center;">
+          <img width="65px" height="65px" src="https://em-content.zobj.net/source/telegram/386/gem-stone_1f48e.webp" />
+      </div>
+      <div class="leader-title">
+          <h1 style="color: #353535; text-align: center;">Leaderboard <br> TOP 100</h1>
+      </div>
+  </div>
+  <script>
+      const openModalBoard = () => {
+        document.querySelector('.view-info').style.background = '#ffffff'
+        document.querySelector('.leader-board').style.display = 'block'
+        document.querySelector('.leader-board').classList.add('animate')
+      }
+  </script>
   <script>
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
         manifestUrl: 'https://raw.githubusercontent.com/purplemeth/presalebot/main/tonconnect-manifest.json',
@@ -78,6 +93,7 @@
     </script>
   <script>
     window.Telegram.WebApp.setHeaderColor('#000000')
+    document.querySelector('#profile').setAttribute('src', `https://t.me/i/userpic/160/${window.Telegram.WebApp.initDataUnsafe.user.username}.jpg`)
     function render() {
         const section = document.querySelector('section');
         const fragment = document.createDocumentFragment();
@@ -93,4 +109,3 @@
   </script>
 </body>
 </html>
-
