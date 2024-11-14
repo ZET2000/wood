@@ -77,6 +77,78 @@
       <div class="leader-title">
           <h1 style="color: #353535; text-align: center;">Leaderboard <br> TOP 100</h1>
       </div>
+      <ul>
+          <li>
+              <div class="about">
+                  <div>
+                      <div style="width: 40px; height: 40px; background: red; border-radius: 50px"></div>
+                  </div>
+                  <div>
+                      <h3 style="font-family: Quicksand">Pavel Durov</h3>
+                      <p style="padding: 0; font-size: 14px; color: #aaaaaa; background: 0;">N1</p>
+                  </div>
+              </div>
+              <div style="display: grid; align-items: center;">
+                  <h1 style="font-family: SYSTEM-UI; font-size: 20px; font-weight: 500;">20000P</h1>
+              </div>
+          </li>
+          <li>
+              <div class="about">
+                  <div>
+                      <div style="width: 40px; height: 40px; background: blue; border-radius: 50px"></div>
+                  </div>
+                  <div>
+                      <h3 style="font-family: Quicksand">Elon Musk</h3>
+                      <p style="padding: 0; font-size: 14px; color: #aaaaaa; background: 0;">N2</p>
+                  </div>
+              </div>
+              <div style="display: grid; align-items: center;">
+                  <h1 style="font-family: SYSTEM-UI; font-size: 20px; font-weight: 500;">18000P</h1>
+              </div>
+          </li>
+          <li>
+              <div class="about">
+                  <div>
+                      <div style="width: 40px; height: 40px; background: purple; border-radius: 50px"></div>
+                  </div>
+                  <div>
+                      <h3 style="font-family: Quicksand">Arina Bolgar</h3>
+                      <p style="padding: 0; font-size: 14px; color: #aaaaaa; background: 0;">N3</p>
+                  </div>
+              </div>
+              <div style="display: grid; align-items: center;">
+                  <h1 style="font-family: SYSTEM-UI; font-size: 20px; font-weight: 500;">15000P</h1>
+              </div>
+          </li>
+          <li>
+              <div class="about">
+                  <div>
+                      <div style="width: 40px; height: 40px; background: darkcyan; border-radius: 50px"></div>
+                  </div>
+                  <div>
+                      <h3 style="font-family: Quicksand">Donald Trump</h3>
+                      <p style="padding: 0; font-size: 14px; color: #aaaaaa; background: 0;">N4</p>
+                  </div>
+              </div>
+              <div style="display: grid; align-items: center;">
+                  <h1 style="font-family: SYSTEM-UI; font-size: 20px; font-weight: 500;">10000P</h1>
+              </div>
+          </li>
+          <li>
+              <div class="about">
+                  <div>
+                      <div style="width: 40px; height: 40px; background: gray; border-radius: 50px"></div>
+                  </div>
+                  <div>
+                      <h3 style="font-family: Quicksand">Kamala</h3>
+                      <p style="padding: 0; font-size: 14px; color: #aaaaaa; background: 0;">N5</p>
+                  </div>
+              </div>
+              <div style="display: grid; align-items: center;">
+                  <h1 style="font-family: SYSTEM-UI; font-size: 20px; font-weight: 500;">5000P</h1>
+              </div>
+          </li>
+      </ul>
   </div>
   <script>
       const openModalBoard = () => {
@@ -93,7 +165,7 @@
     </script>
   <script>
     window.Telegram.WebApp.setHeaderColor('#000000')
-    document.querySelector('#profile').setAttribute('src', `https://t.me/i/userpic/160/${window.Telegram.WebApp.initDataUnsafe.user.username}.jpg`)
+    //document.querySelector('#profile').setAttribute('src', `https://t.me/i/userpic/160/${window.Telegram.WebApp.initDataUnsafe.user.username}.jpg`)
     function render() {
         const section = document.querySelector('section');
         const fragment = document.createDocumentFragment();
