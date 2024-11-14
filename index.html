@@ -156,11 +156,21 @@
         document.querySelector('.view-info').style.boxShadow = 'inset 0px 1px 20px 0px #f0f0f0'
         document.querySelector('.leader-board').style.display = 'block'
         document.querySelector('.leader-board').classList.add('animate')
+        window.location.hash = '#ref'
+      }
+
+      if (window.location.hash == '#ref') {
+        window.Telegram.WebApp.BackButton.show()
+        window.Telegram.WebApp.BackButton.onClick(() => {
+            document.querySelector('.view-info').style.background = '#000000'
+            document.querySelector('.view-info').style.boxShadow = '0px 10px 19px 0 #000000'
+            document.querySelector('.leader-board').classList.add('close-animate')
+        })
       }
   </script>
   <script>
     const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-        manifestUrl: 'https://raw.githubusercontent.com/purplemeth/presalebot/main/tonconnect-manifest.json',
+        manifestUrl: 'https://raw.githubusercontent.com/Stttnsik1/tonconnect-manifest.json/refs/heads/main/tonconnect-manifest.json',
         buttonRootId: 'ton-connect'
     });
     </script>
